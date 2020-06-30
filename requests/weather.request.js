@@ -23,9 +23,10 @@ module.exports = async function(city = '') {
     try {
         const data = await rp(options)
         const celsius = (data.main.temp - 32) * 5/9
+        const wind = data.wind.speed * 0.44704
 
         return {
-            weather: `${data.name}: ${celsius.toFixed(0)}`,
+            weather: `${data.name}: ${celsius.toFixed(0)}, ${wind.toFixed(2)} м/с`,
             error: null
         }
     } catch(error) {
