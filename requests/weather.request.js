@@ -24,14 +24,19 @@ module.exports = async function(city = '') {
         const data = await rp(options)
         const celsius = (data.main.temp - 32) * 5/9
         const wind = data.wind.speed * 0.44704
+        const clouds = data.weather[0]['description']
 
         return {
-            weather: `${data.name}: ${celsius.toFixed(0)}, ${wind.toFixed(2)} м/с`,
+            citySearch: `${data.name}, ${clouds}`,
+            weatherTemp: `Температура воздуха: ${celsius.toFixed(0)}°C`,
+            weatherWind: `Скорость ветра: ${wind.toFixed(2)} м/с`,
             error: null
         }
     } catch(error) {
         return {
-            weather: null,
+            citySearch: null,
+            weatherTemp: null,
+            weatherWind: null,
             error: error.error.message
         }
     }  

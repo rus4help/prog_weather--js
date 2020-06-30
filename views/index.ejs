@@ -9,8 +9,14 @@
 <body>
     <div class="app">
         <div class="app__header">
-            <% if (weather) { %>
-                <h1><%=weather%></h1>
+            <% if (citySearch) { %>
+            <h1><%=citySearch%></h1><br>
+            <% } %>
+            <% if (weatherTemp) { %>
+                <h2><%=weatherTemp%></h2>
+            <% } %>
+            <% if (weatherWind) { %>
+                <h2><%=weatherWind%></h2>
             <% } %>
             <% if (error) { %>
                 <p class="error"><%=error%></p>

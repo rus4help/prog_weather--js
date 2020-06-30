@@ -9,14 +9,14 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
-    res.render('index', {weather: null, error: null})
+    res.render('index', {citySearch: null, weatherTemp: null, weatherWind: null, error: null})
 })
 
 app.post('/', async (req, res) => {
     const {city} = req.body
     
-    const {weather, error} = await weatherRequest(city)
-    res.render('index', {weather, error})
+    const {citySearch, weatherTemp, weatherWind, error} = await weatherRequest(city)
+    res.render('index', {citySearch, weatherTemp, weatherWind, error})
 })
 
 app.listen(3000, () => {
