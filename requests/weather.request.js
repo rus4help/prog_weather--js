@@ -5,5 +5,7 @@ module.exports = async function(city = '') {
         throw new Error('Имя города не может быть пустым.')
     }
 
-    console.log('City:', city)
+    const options = {
+        
+    }
 }
