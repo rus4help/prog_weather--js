@@ -2,7 +2,7 @@ const rp = require('request-promise')
 
 module.exports = async function(city = '') {
     if(!city) {
-        throw new Error('Имя города не может быть пустым.')
+        // throw new Error('Имя города не может быть пустым.')  
     }
 
     const KEY = 'f034c141b4d4cf829b875f166fa58d68'
@@ -37,7 +37,7 @@ module.exports = async function(city = '') {
             citySearch: null,
             weatherTemp: null,
             weatherWind: null,
-            error: error.error.message
+            error: 'Поле не дожно быть пустым, либо такого города нет...'
         }
     }  
 }
