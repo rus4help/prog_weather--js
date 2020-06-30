@@ -14,7 +14,8 @@ module.exports = async function(city = '') {
         qs: {
             appid: KEY,
             q: city,
-            units: 'imperial'
+            units: 'imperial',
+            lang: 'ru'
         },
         json: true
     }
