@@ -1,0 +1,25 @@
+{
+  "name": "prog_weather--js",
+  "version": "0.0.1",
+  "description": "Это приложение для проверки погоды в любом городе мира",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rus4help/prog_weather--js.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "js",
+    "javascript"
+  ],
+  "author": "Денис Нихаев",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rus4help/prog_weather--js/issues"
+  },
+  "homepage": "https://github.com/rus4help/prog_weather--js#readme"
+}
